@@ -23,15 +23,15 @@ import java.util.List;
 /**
  * A placeholder fragment containing a simple view.
  */
-public class MainActivityFragment extends Fragment {
+public class ForecastFragment extends Fragment {
 
-    public MainActivityFragment() {
+    public ForecastFragment() {
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+        View rootView = inflater.inflate(R.layout.forecast_fragment, container, false);
 
         // Create some dummy data
         String[] data = {
@@ -48,7 +48,7 @@ public class MainActivityFragment extends Fragment {
         // Create a new array adapter
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), R.layout.list_item_forecast, R.id.list_item_forecast_textview, weekForecast);
 
-        // Get a reference to the listview defined in fragment_main.xml
+        // Get a reference to the listview defined in forecast_fragment.xml.xml
         ListView listView = (ListView) rootView.findViewById(R.id.listview_forecast);
         listView.setAdapter(adapter);
 
