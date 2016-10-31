@@ -75,6 +75,8 @@ public class ForecastFragment extends Fragment {
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.action_refresh:
+                FetchWeatherTask fetchWeatherTask = new FetchWeatherTask();
+                fetchWeatherTask.execute();
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
